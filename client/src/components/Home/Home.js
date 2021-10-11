@@ -15,7 +15,7 @@ function Home({ setToken }) {
 
   	const handleSubmit = async e => {
 	    e.preventDefault();
-	    await axios.post('http://localhost:5000/login', {credentials: { username, password }})
+	    await axios.post('/login', {credentials: { username, password }})
 				   .then(res => {if(res.data['token']){
 					  				const { token } = res.data;
 							     	setToken(token);

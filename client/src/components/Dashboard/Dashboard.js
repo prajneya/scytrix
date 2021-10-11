@@ -40,7 +40,7 @@ function Dashboard() {
 	if(checkLoad){
 		setMyUsername(getUsername(token))
 		axios
-    		.get("http://localhost:5000/record")
+    		.get("/record")
     		.then(res => {setAllMessages(res.data)})
 
     	setCheckLoad(0);
@@ -57,9 +57,9 @@ function Dashboard() {
 	    	return;
 	    }
 
-	    await axios.post('http://localhost:5000/addMessage', { username: myUsername, message: message })
+	    await axios.post('/addMessage', { username: myUsername, message: message })
 				   .then(res => {axios
-						    		.get("http://localhost:5000/record")
+						    		.get("/record")
 						    		.then(res => {setAllMessages(res.data)})
 						    		updateScroll();
 					  			})
