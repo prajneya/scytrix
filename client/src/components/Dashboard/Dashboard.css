@@ -1,0 +1,59 @@
+.chat-container{
+	height: 60vh;
+	border: solid;
+	overflow-y: scroll;
+	border-radius: 10px;
+}
+
+.chat{
+	height: 70vh;
+	position: relative;
+}
+
+.message-sender{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	border-radius: 20px;
+	border: dotted;
+}
+
+.message-sender input{
+	width: 85%;
+	height: 45px;
+	border-radius: 20px;
+}
+
+.message{
+	width: 60%;
+	min-height: 20px;
+	border-radius: 20px;
+	background-size: 100%;
+	overflow: cover;
+}
+
+.left{
+	background-color: #fde0d9;
+}
+
+.right{
+	background-color: #caf4f4;
+	position: relative;
+	transform: translate(60%, 0%);
+}
+
+.msg-user{
+	display: flex;
+	font-weight: bolder;
+}
+
+.logout{
+	position: absolute;
+	right: 10px;
+}
+
+.logout:hover{
+	color: red;
+	cursor: pointer;
+}
